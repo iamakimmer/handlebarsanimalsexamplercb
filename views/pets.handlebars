@@ -1,0 +1,15 @@
+<script type="text/javascript">
+$.get('/all-pets-api').done(function(res) {
+	console.log(res);
+	res.anims.forEach(function(pet) {
+		$('#pets').append(`<li>
+			<p>Type: ${pet.animalType}</p>
+			<p>Pet: ${pet.pet}</p>
+			<p>Fierceness: ${pet.fierceness}</p>
+		</li>`)
+	})
+});
+</script>
+
+<ul id="pets">
+</ul>
